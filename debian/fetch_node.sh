@@ -9,9 +9,15 @@ VERSION=v22.17.1
 
 # shasums can be downloaded from https://nodejs.org/dist/${VERSION}/SHASUMS256.txt
 # checksum changes without version change should be investigated.
-SHA256SUM="ff04bc7c3ed7699ceb708dbaaf3580d899ff8bf67f17114f979e83aa74fc5a49"
 
-PLATFORM=linux-x64
+if [ "$(uname -m)" = "aarch64" ];
+then
+    PLATFORM=linux-arm64
+    SHA256SUM="a5bb879af2fe70e7b5dc5e0bbadecba88e87f45bd8e62c0c57b5c815a4cbbaa6"
+else
+    PLATFORM=linux-x64
+    SHA256SUM="ff04bc7c3ed7699ceb708dbaaf3580d899ff8bf67f17114f979e83aa74fc5a49"
+fi
 
 wget https://nodejs.org/dist/${VERSION}/node-${VERSION}-${PLATFORM}.tar.xz
 
