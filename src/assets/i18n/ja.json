@@ -1,6 +1,6 @@
 {
   "0": "0",
-  "Debug information could not be attached to the ticket: {error}": "",
+  "Debug information could not be attached to the ticket: {error}": "デバッグ情報をチケットに添付できませんでした: {error}",
   " as of {dateTime}": " {dateTime} 現在",
   " bytes.": "バイト。",
   " Est. Usable Raw Capacity": "推定の使用可能な生容量",
